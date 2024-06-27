@@ -1,0 +1,16 @@
+<!-- templates/courses/course_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Course List</title>
+</head>
+<body>
+ <h1>Courses</h1>
+ <ul>
+ {% for course in courses %}
+ <li><a href="{% url 'course_detail' course.id %}">{{ course.name }}</a></li>
+ {% endfor %}
+ </ul>
+</body>
+</html>
